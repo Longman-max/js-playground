@@ -1,4 +1,4 @@
-# Code Playground
+# JavaScript Playground
 
 Past JS learning projects — experiments and growth.  
 
