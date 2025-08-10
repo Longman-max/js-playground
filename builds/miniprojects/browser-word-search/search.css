@@ -1,0 +1,53 @@
+.search-box {
+  padding: 5px 10px;
+  font-size: 15px;
+  background-color: rgb(255, 146, 146);
+  border: 1px solid black;
+}
+
+.search-box::placeholder {
+  color: white;
+}
+
+.search-box:focus {
+  outline: none;
+}
+
+.search-button {
+  padding: 5px 10px;
+  margin-left: -5px;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.container .text {
+  font-size: 20px;
+}
+#display-search-result {
+  text-align: center;
+}
+
+.display-result {
+  font-size: 30px;
+  line-height: 0;
+}
+
+.searched-word {
+  color: red;
+  font-style: italic;
+}
+
+.search-tip {
+  color: gray;
+}
+
+.found {
+  background-color: orange;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="search.css" />
+  </head>
+  <body>
+    <div id="display-search-result">
+      <p class="display-result">Search for a word .....</p>
+    </div>
+
+    <div class="container">
+      <div>
+        <input
+          id="search-input"
+          class="search-box"
+          type="text"
+          value="lorem"
+          placeholder="Find..."
+          onkeyup="findWord()"
+        />
+        <button class="search-button" onclick="findWord()">Search</button>
+      </div>
+      <div class="text-area">
+        <p id="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam minima
+          sapiente dolores officiis nisi maiores id, eos aut amet, cumq
+          dignissimos quis! Repellendus Lorem Lorem Lorem reiciendis fugit,
+          voluptates accusamus sed, minus expedita ut quibusdam quam vitae
+          incidunt voluptas rem culpa. Aut, autem?
+        </p>
+      </div>
+    </div>
+
+    <script src="search.js"></script>
+  </body>
+</html>

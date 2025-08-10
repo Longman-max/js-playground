@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Create a simple JavaScript object and convert it to JSON format. Then, parse the JSON back into a JavaScript object.
+      const person = {
+        name: "Obasi",
+        age: 17,
+        isAdmin: false,
+      };
+
+      const jsonPerson = JSON.stringify(person);
+      const parsedPerson = JSON.parse(jsonPerson);
+
+      console.log(person);
+      console.log(jsonPerson);
+      console.log(parsedPerson);
+
+      //   Store a JSON object in localStorage and retrieve it.
+      // Create a JavaScript object
+      console.log("*****************************************");
+
+      const user = {
+        name: "Longman",
+        age: 17,
+        email: "obasiagbai94@gmail.com",
+        isAdmin: true,
+      };
+
+      //   Convert the object to a JSON object
+
+      const jsonUser = JSON.stringify(user);
+
+      // Store the JSON in a localstorage
+      localStorage.setItem("user", jsonUser);
+
+      // Retrieve and parse JSON from localstorage
+      const storedUser = JSON.parse(localStorage.getItem("user"));
+
+      console.log(user);
+      console.log(jsonUser);
+      console.log(storedUser);
+
+      console.log(typeof document.body.title)
+      </script>
+  </body>
+</html>

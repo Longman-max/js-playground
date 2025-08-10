@@ -1,0 +1,489 @@
+Javascript
+Javascript is a scripting language used to make websites interactive.
+In Javascript we end a code with a colon(;)
+
+------------
+STRINGS
+------------
+Strings are textual data
+To display a string in the console.log('string') we use the code;
+We use quotes to display a string.
+console.log('Hello world')
+This then displays the the text 'Hello world' in the console.
+
+
+------------
+NUMBERS
+------------
+Numbers in Javascript are similar to numbers in math.
+All numbers types are numbers i.e in javascript there is no distinction compared to other programming  languenges. (float, int)
+17, 3.4, 5.600, 0
+console.log(17 + 1);
+This will give the result 18;
+
+-------------------
+NaN (Not a number)
+-------------------
+
+****Note (Order of precedence)
+Just like BODMAS but in Javascript it is called PEDMAS we calcuting with numbers certain values are been calculated first based on the operator. 
+
+Order of precedence
+    (--) -- Values in brackets are calculated first
+    Multiplication and division comes next
+    Addition and Substraction have the least precedence.
+
+------------
+VARIABLES
+------------
+Variables are used to data. They can later on be changed,
+We use let to declare a variable in JavaScript
+lets say we want to store the name 'Obasi' inside a variable name.
+let name = 'Obasi';
+console.log(name);
+Rules for naming variables in JavaScript
+    Cannot be a reserved keyword e.g let, if, else, var and so on
+    It should be meaning. Don't use names like a, b, c, x, a1, b2 and so on
+    Cannot start with a number
+    Cannot contain space or hyphen(-)
+    Use canal notation for naming i.e The first letter of the word should be in small letter then the next word should start with a capital letter. e.g let firstName
+    And they are case sentitive
+    Naming varibles:
+    let firstName = 'Longman';
+    let secondName = 'Agbai';
+
+Variables can be used to store strings, booleans.
+
+
+
+-----------
+CONSTANTS
+----------
+Constants are also used to data. They cannot be changed.
+We usually use constants when we don't what to change the value os a variable in our code.
+lets say we want to store the age 'Obasi' inside a constant age.
+let age = 17;
+console.log(age);
+
+
+
+------------------
+OBJECTS
+-----------------
+Objects are used to group information into a class.
+To get the get the class we either use the dot notation or the bracket notation.
+Lets say we 
+let person = {
+            name: 'Chris',
+            age: '37',
+            dob: '13th December 2023'
+        }
+
+        console.log(person);
+        console.log(person.name); This will give us the name of the person.
+
+        ------
+        Bracket notation is used to change the value.
+        person['name'] = 'Obasi';
+        person['age'] = '17 years'
+        console.log(person.name +' '+ person.age)
+
+--------------------
+JARGON REFRENCENCES
+----------------------
+	Ways to copy an object safely;
+1. Using the object assign method
+	object2 = Object.assign({}, object1);
+2. Using the spread operator
+	object2 = {...animal }; This three dots are called the spread operator
+	It basiclaly means spread out the properties into the new object(object2)
+3. Using the JavaScript Object Notation
+	Here, we will first convert the object to a string and then parse(convert the string into an object) an assign it the new variable.
+	object2 = JSON.parse(JSON.stringify(object1))
+	
+
+----------------
+BUILT IN OBJECTS
+----------------
+Built in oblects are those objects that are default to the programming language.
+We have the console, MAth and so on
+
+
+    -----------
+    JSON
+    -----------
+    JSON (JavaScript Object Notation)
+    We use JSON when sending data between computers
+        console.log(JSON.stringify(person))
+        The stringify method(function) is used to convert an object to a string. 
+        When the use the Parse to convert a JSON code back to a Javascript code.
+
+
+localStorge
+This is used to save values more permanently. Unlike variables and constants localStorage doesn't get deleted. Its stores the value ones you reload the page.
+const product2 = {
+        name: "Shirt",
+        ["delivery-time"]: "1 day",
+        rating: {
+          stars: 4.5,
+          count: 87,
+        },
+        fun: function function1() {
+          console.log("funtion inside object");
+        },
+      };
+
+      console.log(product2);
+      console.log(product2.name);
+      console.log(product2["name"]);
+      console.log(product2["delivery-time"]);
+      console.log(product2.rating.count);
+      console.log(product2.fun);
+      product2.fun();
+
+      console.log(JSON.stringify(product2));
+
+      const jsonString = JSON.stringify(product2);
+      console.log(JSON.parse(jsonString));
+
+      localStorage.setItem("message", "hello");
+      console.log(localStorage.getItem("message"));
+
+
+
+--------------
+ARRAYS(list)
+--------------
+Arrays are used to display elements in a list.
+let friends= ['John', 'Mike', 'Jackie Chan'];
+        console.log(friends);
+
+
+        To display an item we use the index position of that item.
+        ['John', 'Mike', 'Jackie Chan']
+           0       1          2
+        console.log(friends[2]);
+
+-------------
+FUNCTIONS
+-------------
+Functions lets us reuse code
+To declare a function We use;
+    function functionName() {
+        //The code we want to run when we call the function
+        console.log('Hello');
+    }
+
+Use funstion define a parameter to run a code;
+Use the function greet(parameter1, parameter2) {
+    console.log(parameter1 + ' ' + parameter2);
+}
+
+greet('argument1', 'argument2');
+This will then display the following string stored in the console.
+
+A pararmeter is what we have at the time of declaration while an argument is the actual value we supply for that parameter.
+
+
+WE CAN ALSO DEFINE FUNCTION FOR CALCULATING A VALUE
+function square(num1, num1) {
+    return num1 * num1;
+}
+
+console.log(square(5));
+
+------------
+BOOLEANS
+------------
+Booleans have only two values is either true or false;
+It  compares a condition and returns true if the condition is TRUE and false if the condition is FALSE.
+
+Example:
+console.log(3 > 2);
+This will return true because the statement is TRUE.
+
+console.log(3 < 2);
+This will return false because the statement is False.
+
+const age = 15;
+
+      if (age >= 20 ) {
+          console.log('You can drive');
+          console.log('Congrats')
+      } else if (age <= 20) {
+          console.log('Almost there!');
+      } else {
+          console.log("Sorry you can't drive")
+      }
+
+------------
+CONDITIONS
+-----------
+Here we use conditions to comapare and run a code based on the condition.
+const age = 15;
+if (age >= 20 ) {
+    console.log('You can drive');
+    console.log('Congrats')
+    } else if (age <= 20) {
+        console.log('Almost there!');
+    } else {
+        console.log("Sorry you can't drive")
+    }
+
+
+------------------
+CONDITIONAL SWITCH
+------------------
+var answer = window.prompt("Are you excited? ");
+
+switch (answer) {
+  case "YES":
+    console.log("That is great!");
+    break;
+  case "NO":
+    console.log("Sorry!");
+    break;
+  case "MAYBE":
+    console.log("Youre not sure?");
+    break;
+  default:
+    console.log("You rebel you!");
+}
+
+
+----------------------
+COMPARISION OPERATORS
+----------------------
+We use these operators to comapare values.
+This include;
+    < less than
+    > greater than
+    <= less than or equal to
+    >= greater than or equal to
+    === equal to
+    !== not equal to
+
+    console.log(3 < 2);
+
+    console.log(3 > 2);
+
+    console.log(3 === 2);
+
+    console.log(3 !== 2);
+
+***Note
+    If you the doulbe equal to '==' it converts the two values to the same type. i.e(Type Coersion)
+    console.log(5 == '5');
+    The result then becomes true.
+    The same goes with '!=' the exclamation mark with single equal sign.
+
+    
+
+-----------------
+LOGICAL OPERATORS
+-----------------
+This are used to for logical comaparison.
+    && =  AND operator {This checks if both condition are true else it returns false.}
+    || =  OR operator {This checks if either of the conditions are True else it returns false.}
+    ! =   NOT operator  {This inverts the condition. If it is true it returns false and vice versa}
+
+    console.log(true && true);
+    console.log(false || true);
+    console.log(!True)
+
+
+--------------------
+ORDER OF PRECEDENCE
+--------------------
+PEDMAS
+Here () -comes first
+    
+
+-----------------------
+TRUTHY AND FALSY VALUES
+----------------------
+Truthy values are values that behave truth on booleans.
+if (5) {
+    console.log('Truthy);
+}
+
+5 is a truthy value.
+
+Falsy Values are those values that are false by default. This include 0, NaN(Not a number), undefined, null.
+if (0) {
+    console.log('Falsy');
+}
+
+------------
+DOM
+-------------
+Dom refers to document object module 
+
+
+
+------------------------
+	LOOPS
+------------------------
+Loops are used to repeat a code a certain number of times.
+
+*****For loops
+for (let i = 0; i < 10; i++){
+	console.log('Hello world', i)
+}
+RUN>
+Hello world 0
+Hello world 1
+Hello world 2
+Hello world 3
+Hello world 4
+Hello world 5
+Hello world 6
+Hello world 7
+Hello world 8
+Hello world 9
+
+let i = 0 ----> This is refered to as the intializer.
+i < 10 -----> This is the condition. As long as this condition is true the code will run.
+1++ ----> This is the increment step of the variable(*Without these it will lead to an infinite loop.
+{console.log('Hello world', i)} ----> This is the body of the 
+
+// Iterating through an array
+
+var pageNames = [
+  "Home",
+  "About Us",
+  "Contact us",
+  "JavaScript Playground",
+  "News",
+  "Blog",
+];
+
+// Using for loops
+for (let i = 0; i < pageNames.length; i++) {
+  console.log(i, pageNames[i]);
+}
+
+// The enumerative for loops (for in and the for of)
+
+// for in loops
+// This another shorcut to get the key of an array
+for (var p in pageNames) {
+  console.log(p, pageNames[p]);
+}
+
+// for of loops
+// These allows us to direclty get the value of an array
+for (var v of pageNames) {
+  console.log(v);
+}
+
+--WHILE LOOPS
+// While loops
+
+let i = 0;
+while (i < 10) {
+  console.log(i + "... This will go until we hit ten.");
+  i += 1;
+}
+
+var myList = [true, true, true, false, true, true];
+var myItem = null;
+
+while (myItem !== false) {
+  console.log(
+    "myList has " +
+      myList.length +
+      " items now. This loop will keep going until we pop a false."
+  );
+  myItem = myList.pop();
+}
+
+---- do while loop.
+
+
+----------------
+SET AND MAP
+-------------
+ let mySet = new Set();
+ let myMap = new Map();
+Using this method is called using the constructor method.
+
+Sets are like Arrays, Except;
+  - Sets store each value exactly and only once.
+  - Must be accessed and changed using special methods.
+mySet.add(1) = Set{1} = 1
+
+// Working with sets
+let myList = [1, 9, 2, 3, 4, 5, 13, "fibonacci"];
+
+// Using normal for loops
+// for (let p = 0; p < myList.length; p++) {
+//   console.log("My list  contains: ", myList[p]);
+// }
+
+//  Sets remove duplicates
+
+let mySet = new Set();
+mySet.add(1);
+console.log(mySet);
+
+mySet.add(1);
+console.log(mySet);
+
+let mySet2 = new Set(myList);
+console.log(mySet2);
+
+mySet.has(1); //---> This returns true
+mySet.has(12); //---> This will return false.
+
+// We use for of loops when looping through sets
+for (let item of mySet2) {
+  console.log("My set contains: ", item);
+}
+
+/* Working with maps
+
+This object is a bird;*/
+
+let bird = {
+  genus: "corvus",
+  species: "corvax",
+  commonName: "raven",
+};
+
+// bird map
+let birdMap = new Map();
+
+// We first set key , the value of the key(all in quotes)
+birdMap.set("genus", "corvus");
+birdMap.set("species", "corvax");
+birdMap.set("commonName", "raven");
+
+// console.log(bird);
+
+// console.log(birdMap);
+
+// We use the get method to get an item for a map.
+console.log(birdMap.get("genus"));
+
+for (let v of birdMap) {
+  console.log("Birdmap contains: ", v);
+}
+
+/*
+   looping through maps
+   This will return an array, this type of array is called an entry list
+   To avoid this we first convert the object to an entry list using the Object.entries(object) => then passing it to the map using the constructor method => myMap2 = new Map(Object.entries(object))
+*/
+
+// USING THE OBJECT.ENTRIES() in the for of loop.
+
+let birdMap2 = new Map(Object.entries(bird));
+for (v of birdMap2) {
+  console.log(v);
+}
+
+// console.log(birdMap2);
+
+// Note we always use the for of loops when looping through maps and sets
+

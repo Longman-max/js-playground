@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Boolean</title>
+  </head>
+  <body>
+    <script>
+
+      /*
+      const age = 15;
+
+      if (age >= 20 ) {
+          console.log('You can drive');
+          console.log('Congrats')
+      } else if (age <= 20) {
+          console.log('Almost there!');
+      } else {
+          console.log("Sorry you can't drive")
+      }
+      */
+
+
+      // Logically operator
+
+      /*console.log(true && true);
+      console.log(false && true);
+
+      console.log(true || false);
+      console.log(!false);
+
+      console.log(!true);
+      /*
+
+          /*if (5) {
+            console.log('truthy');
+        }
+
+        const cartQuantity =  undefined;
+        if (cartQuantity) {
+            console.log('Cart has products')
+        }else {
+            console.log('falsy')
+        }
+        */
+
+
+        // Tenary operator ?:
+        const result = 0 ? 'truthy' : 'falsy';
+        console.log(result);
+
+        // Guard operator &&
+        false && console.log('hello')
+
+        const message = 5 && 'hello';
+        console.log(message);
+
+        // Default operator
+        const currency = undefined || 'USD';
+        console.log(currency);
+    </script>
+    </script>
+  </body>
+</html>

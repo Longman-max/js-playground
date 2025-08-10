@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .cost-input {
+        font-size: 15px;
+        padding: 10px;
+      }
+
+      .calculate-button {
+        background-color: green;
+        color: white;
+        border: none;
+        font-size: 15px;
+        padding: 12px 15px;
+        cursor: pointer;
+      }
+
+      .error-message {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Amazon Shopping Calculator</p>
+    <input
+      placeholder="Cost of order"
+      class="js-cost-input cost-input"
+      onkeydown="
+      handleKeyDownEvents(event)
+    "
+    />
+    <button
+      class="calculate-button"
+      onclick="
+    calculateTotal();
+    "
+    >
+      Calculate
+    </button>
+    <p class="js-total-cost"></p>
+    <script>
+      function calculateTotal() {
+        const inputElement = document.querySelector(".js-cost-input");
+        const result = document.body.querySelector(".js-total-cost");
+        let cost = Number(inputElement.value);
+        if (cost < 40 && cost > 0) {
+          result.classList.remove("error-message");
+          cost += 10;
+          result.innerHTML = `$${cost}`;
+        } else if (cost >= 40) {
+          result.classList.remove("error-message");
+          result.innerHTML = `$${cost}`;
+        } else if (cost < 0) {
+          if (!result.classList.contains("error-message")) {
+            removeError();
+            result.classList.add("error-message");
+            result.innerHTML = "Error: Cost cannot be less than $0";
+          }
+        }else {
+          result.classList.add("error-message");
+          result.innerHTML = "Invalid cost!";
+        }
+      }
+
+      function handleKeyDownEvents(event) {
+        if (event.key === "Enter") {
+          calculateTotal();
+        }
+      }
+
+      function removeError() {
+        error = document.body.querySelector(".error-message");
+        if (error) {
+          error.classList.remove("error-message");
+        }
+      }
+    </script>
+  </body>
+</html>

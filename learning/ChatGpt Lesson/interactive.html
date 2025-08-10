@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        margin: 0;
+      }
+
+      p {
+        font-size: 30px;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input {
+        font-size: 20px;
+      }
+
+      button {
+        padding: 5px 10px;
+        border: 1px solid;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Enter a color</p>
+    <input
+      onkeydown="handleKeyDownEvents(event)"
+      onkeyup="handleKeyUpEvents(event)"
+    />
+    <button onclick="changeBackgroundColor()">Change</button>
+    <script>
+      function changeBackgroundColor() {
+        const inputElement = document.querySelector("input");
+        let color = inputElement.value;
+        document.body.style.backgroundColor = `${color}`;
+        const buttonElement = document.querySelector("button");
+        if (buttonElement.innerHTML === "Change") {
+          buttonElement.innerHTML = "Changed";
+        } else {
+          buttonElement.innerHTML = "Change";
+        }
+        if (document.body.style.backgroundColor === "black") {
+          document.querySelector("p").style.color = "white";
+        } else {
+          document.querySelector("p").style.color = "black";
+        }
+      }
+
+      function handleKeyDownEvents(event) {
+        if (event.key === "Enter") {
+          changeBackgroundColor();
+        }
+      }
+
+      function handleKeyUpEvents(event) {
+        if (event.key !== "Backspace") {
+          changeBackgroundColor();
+        }
+      }
+    </script>
+  </body>
+</html>

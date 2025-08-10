@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <script>
+      alert("Calculator");
+    </script>
+    <link rel="stylesheet" href="pixel-calculator.css" />
+  </head>
+  <body>
+    <div class="phone">
+      <div class="calculator">
+        <div class="calc-input">
+          <input class="calc" maxlength="12" />
+        </div>
+        <div class="keypad">
+          <div class="row-1">
+            <button
+              onclick="
+                    clearScreen()"
+              class="auto-clear"
+            >
+              AC
+            </button>
+            <button
+              onclick="
+              calculate(handleBrackets(value))
+                    ;"
+              class="operator"
+            >
+              ( )
+            </button>
+            <button
+              onclick="
+                    calculate('sqrt');"
+              class="operator"
+            >
+              √
+            </button>
+            <button
+              onclick="
+                    calculate('/');"
+              class="operator"
+            >
+              /
+            </button>
+          </div>
+
+          <div class="row-2">
+            <button
+              onclick="
+                        calculate('7');"
+              class="numbers"
+            >
+              7
+            </button>
+            <button
+              onclick="
+                    calculate('8');"
+              class="numbers"
+            >
+              8
+            </button>
+            <button
+              onclick="
+                   calculate('9');"
+              class="numbers"
+            >
+              9
+            </button>
+            <button
+              onclick="
+                    calculate('*');"
+              class="operator"
+            >
+              &times;
+            </button>
+          </div>
+
+          <div class="row-3">
+            <button
+              onclick="
+                        calculate('4');"
+              class="numbers"
+            >
+              4
+            </button>
+            <button
+              onclick="
+                    calculate('5');"
+              class="numbers"
+            >
+              5
+            </button>
+            <button
+              onclick="
+                    calculate('6');"
+              class="numbers"
+            >
+              6
+            </button>
+            <button
+              onclick="
+                    calculate('-');"
+              class="operator"
+            >
+              -
+            </button>
+          </div>
+
+          <div class="row-4">
+            <button
+              onclick="
+                        calculate('1');"
+              class="numbers"
+            >
+              1
+            </button>
+            <button
+              onclick="
+                    calculate('2');"
+              class="numbers"
+            >
+              2
+            </button>
+            <button
+              onclick="
+                    calculate('3');"
+              class="numbers"
+            >
+              3
+            </button>
+            <button
+              onclick="
+                   calculate('+');"
+              class="operator"
+            >
+              +
+            </button>
+          </div>
+
+          <div class="row-5">
+            <button
+              onclick="
+                        calculate('0');"
+              class="numbers"
+            >
+              0
+            </button>
+            <button
+              onclick="
+                    calculate('.');"
+              class="numbers"
+            >
+              .
+            </button>
+            <button onclick="deleteLastCharacter()" class="delete">Del</button>
+            <button
+              onclick="
+                    displayResult()"
+              class="operator"
+            >
+              =
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="media">
+        <div class="notch" title="notch"></div>
+        <div class="camera-1" title="camera-1"></div>
+        <div class="camera-2"></div>
+        <div class="speaker-1"></div>
+      </div>
+      <div class="speaker-2"></div>
+    </div>
+    <script src="pixel-calculator.js"></script>
+  </body>
+</html>

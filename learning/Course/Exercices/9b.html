@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM excercises</title>
+  </head>
+  <body>
+    <button class="second-button" onclick="handleButton()">9b</button>
+    <script>
+      function handleButton() {
+        const buttonElement = document.querySelector(".second-button");
+        if (buttonElement.innerHTML === "9b") {
+          document.querySelector(".second-button").innerHTML = "9b done";
+        } else {
+          document.querySelector(".second-button").innerHTML = "9b";
+        }
+      }
+    </script>
+  </body>
+</html>

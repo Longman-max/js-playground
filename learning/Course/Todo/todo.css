@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  background-color: rgb(255, 229, 194);
+}
+
+p {
+  font-size: 40px;
+  font-family: cursive;
+}
+
+.display-todo,
+.input-grid {
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  column-gap: 20px;
+  row-gap: 10px;
+  align-items: center;
+}
+
+.input-grid {
+  margin-bottom: 10px;
+  align-items: stretch;
+}
+
+.js-todo-name {
+  font-size: 18px;
+}
+
+.due-date {
+  font-size: 18px;
+}
+
+.js-todo-name,
+.due-date {
+  padding: 5px;
+}
+
+.js-todo-name {
+  width: 200px;
+}
+
+button {
+  border: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(214, 214, 214);
+}
+
+.add-todo-button {
+  color: green;
+}
+
+.delete-todo {
+  color: red;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}

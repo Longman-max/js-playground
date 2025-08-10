@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function minMax(nums) {
+        // We''ll set the starting values of min and max'
+        //as the first value in the array
+        //just one way to set the starting values.         _You can use another way_
+        const result = {
+          min: null,
+          max: null,
+        };
+        for (let i = 0; i < nums.length; i++) {
+          const value = nums[i];
+
+          //If the min is null or the value is less than the min update the min
+          if (result === null || value < result.min) {
+            result.min = value;
+          }
+
+          //if max is null or the value is greater than the min update the max
+          if (result === null || value > result.max) {
+            result.max = value;
+          }
+          // We have two if statements above instead of an if-else statement, This makes sure
+          //min ad max are set if they are null
+        }
+        return result;
+      }
+      console.log(minMax([3]));
+      console.log(minMax([]));
+      console.log(minMax([2, 3, -5]));
+    </script>
+  </body>
+</html>

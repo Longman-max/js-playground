@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        height: 100vh;
+        align-items: center;
+        flex-direction: column;
+
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .outer-shell {
+        width: 85px;
+        height: 30px;
+        background-color: rgb(206, 206, 206);
+        border: none;
+        border-radius: 30px;
+        position: relative;
+      }
+
+      .inner-shell {
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(231, 231, 231);
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        position: absolute;
+        bottom: -5px;
+        cursor: pointer;
+        font-size: 10px;
+        /* box-shadow: 5px 5px 3px 3px rgb(255, 192, 192); */
+        transition: box-shadow 0.2s;
+      }
+
+      /* .inner-shell:hover {
+        border: 5px solid;
+        border-color: rgba(255, 192, 203, 0.781);
+      } */
+
+      /* .inner-shell:active {
+        box-shadow: 10px 10px 10px pink;
+      }
+
+      .inner-shell:hover {
+        box-shadow: 10px 10px 10px pink;
+      } */
+
+      /* .inner-shell .off-text,
+      .on-text {
+        opacity: 0;
+        color: black;
+      }
+
+      .inner-shell:hover .on-text {
+        opacity: 1;
+        margin-left: 15px;
+      } */
+
+      /* .inner-shell:hover {
+        background-color: rgb(238, 238, 158);
+      } */
+
+      .is-toggled {
+        right: 0;
+        background-color: rgb(185, 0, 0);
+        transition: all 0.15s;
+      }
+
+      .is-toggled:active {
+        box-shadow: none;
+      }
+      .is-toggled:hover {
+        box-shadow: none;
+      }
+
+      .interact {
+        background-color: rgb(255, 138, 138);
+        transition: all 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>OFF</h1>
+    <div class="outer-shell container">
+      <div class="inner-shell button-2" onclick="isToggled('.button-2')">
+        <!-- <span class="on-text">ON</span><span class="off-text">OFF</span> -->
+      </div>
+    </div>
+    <script>
+      function isToggled(selector) {
+        const button = document.querySelector(selector);
+        const buttonContainer = document.querySelector(".container");
+        if (!button.classList.contains("is-toggled")) {
+          turnOff();
+          button.classList.add("is-toggled");
+          buttonContainer.classList.add("interact");
+          document.body.style.backgroundColor = "orange";
+          document.querySelector("h1").innerHTML = "ON";
+        } else {
+          button.classList.remove("is-toggled");
+          buttonContainer.classList.remove("interact");
+          document.body.style.backgroundColor = "";
+          document.querySelector("h1").innerHTML = "OFF";
+        }
+      }
+
+      function turnOff() {
+        const turnOn = document.querySelector(".is-toggled");
+        if (turnOn) {
+          turnOn.classList.remove("is-toggled");
+        }
+      }
+    </script>
+  </body>
+</html>

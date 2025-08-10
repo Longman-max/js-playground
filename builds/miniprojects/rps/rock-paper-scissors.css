@@ -1,0 +1,162 @@
+.playGame {
+  padding: 10px;
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px brown solid;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.playGame:hover {
+    background-color: rgba(128, 128, 128, 0.575);
+}
+
+.playGame:active{
+  background-color: gray;
+}
+.reset-button {
+  padding: 8px;
+  font-size: 16px;
+  background-color: rgba(134, 133, 133, 0);
+  color: rgb(75, 75, 75);
+  border: 2px brown solid;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.15s color 0.15s;
+}
+.reset-button:hover {
+  background-color: rgba(134, 133, 133);
+  color: white;
+}
+.reset-button:active {
+    background-color: brown;
+    color: white;
+}
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+
+.play-button {
+  justify-content: right;
+  padding-bottom: 15px;
+}
+
+
+.game {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 1.5px;
+  background-color: rgb(237, 193, 255);
+  padding: 15px 30px 15px 30px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.game:hover {
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6);
+}
+
+.computer-move {
+    color: brown;
+    font-weight: bold;
+}
+
+#computer-move {
+    font-size: 30px;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.help {
+  background-color: rgb(153, 153, 153);
+  margin-left: 500px;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 16px;
+  border-radius: 100%;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.15s color 0.15s;
+}
+
+.help:hover {
+  background-color: rgb(100, 100, 100);
+  color: black;
+}
+
+
+.rules-toolbox {
+  position: absolute;
+
+  background-color: wheat;
+  display: inline-flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-wrap: nowrap;
+  top: 10px;
+  left: -490px;
+  border-radius: 5px;
+  color: black;
+  font-size: 20px;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 1000;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+}
+
+.rules-toolbox .rules {
+  margin-bottom: 0;
+}
+.help:hover .rules-toolbox {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.blink {
+  display: flex;
+  justify-content: center;
+}
+
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+.blinking-text {
+  animation: blink 1s infinite;
+  font-size: 12px;
+}
+
+.playGame:hover .blinking-text {
+  opacity: 9;
+}

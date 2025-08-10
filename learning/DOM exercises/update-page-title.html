@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM exercises</title>
+  </head>
+  <body>
+    <button id="updateTitleButton">Update title</button>
+    <script>
+      const button = document.getElementById("updateTitleButton");
+      button.addEventListener("click", () => {
+        //check if the title is default
+        if (document.title === "DOM exercises") {
+          document.title = "New page title";
+          console.log(document.title);
+        } else {
+          document.title = "DOM exercises";
+          console.log(document.title);
+        }
+      });
+    </script>
+  </body>
+</html>

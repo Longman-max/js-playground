@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM excercises</title>
+  </head>
+  <body>
+    <input
+      class="input-name"
+      placeholder="Name"
+      onkeydown="
+        handleKeyDownEvent(event);
+        "
+    />
+    <button onclick="submitName()">Submit</button>
+    <p class="display-name"></p>
+    <script>
+      function submitName() {
+        const text = document.querySelector(".input-name").value;
+        document.querySelector(
+          ".display-name"
+        ).innerHTML = `Your name is ${text}`;
+      }
+
+      function handleKeyDownEvent(event) {
+        if (event.key === "Enter") {
+          submitName();
+        }
+      }
+    </script>
+  </body>
+</html>

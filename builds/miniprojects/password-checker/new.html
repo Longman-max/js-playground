@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      description="Using Combining HTML, CSS and JavaScript together to create a form."
+    />
+    <title>Login</title>
+    <link rel="stylesheet" href="new.css" />
+  </head>
+  <body>
+    <input
+      class="set-password-input"
+      placeholder="New password"
+      onkeydown="handleKeyDownEventsInitial(event)"
+    />
+    <button onclick="setPassword()" class="set-button">SET</button>
+    <br />
+    <div class="password-section">
+      <input
+        placeholder="Confirm"
+        class="password-input"
+        onkeydown="handleKeyDownEventsUser(event)"
+      />
+      <button onclick="verifyPassword()" class="login-button">Confirm</button>
+    </div>
+    <p class="display-login-status"></p>
+
+    <!-- Source to js-code -->
+    <script src="new.js"></script>
+  </body>
+</html>

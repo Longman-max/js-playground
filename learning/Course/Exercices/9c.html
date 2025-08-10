@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM excercises</title>
+  </head>
+  <body>
+    <button class="heads-button" onclick="handleCoins('heads')">heads</button>
+    <button class="tail-button" onclick="handleCoins('tails')">tails</button>
+    <p class="display"></p>
+    <script>
+      function handleCoins(coin) {
+        if (coin === "heads") {
+          document.querySelector(".display").innerHTML = `You chose: ${coin}`;
+        } else if (coin === "tails")
+          document.querySelector(".display").innerHTML = `You chose: ${coin}`;
+      }
+    </script>
+  </body>
+</html>

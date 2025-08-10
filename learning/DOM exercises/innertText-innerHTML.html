@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM exercises</title>
+  </head>
+  <body>
+    <p id="displayText">Original Text</p>
+    <button id="changeTextButton">Change text button</button>
+    <script>
+      const button = document.getElementById("changeTextButton");
+      const text = document.getElementById("displayText");
+      button.addEventListener("click", () => {
+        if (
+          text.innerText === "Original Text" &&
+          button.innerText === "Change text button"
+        ) {
+          text.innerHTML = `<strong>New text</strong>`;
+          button.innerText = "Changed";
+        } else {
+          text.innerText = "Original Text";
+          button.innerText = "Change text button";
+        }
+      });
+    </script>
+  </body>
+</html>

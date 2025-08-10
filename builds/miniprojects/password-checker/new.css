@@ -1,0 +1,72 @@
+.login-button {
+  padding: 5px 10px;
+  margin-left: -5px;
+  border: solid 1px gray;
+  border-left: none;
+  background-color: gray;
+  cursor: pointer;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.set-button {
+  padding: 5px 10px;
+  margin-left: -5px;
+  border: solid 1px gray;
+  border-left: none;
+  background-color: gray;
+  cursor: pointer;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+input {
+  padding: 5px 10px;
+  border: solid 1px gray;
+}
+
+.password-section {
+  margin-top: 10px;
+}
+
+/* Hovering / Active styles */
+.login-button:hover {
+  background-color: rgba(0, 0, 0, 0.932);
+  color: white;
+  transition: background-color 0.15s;
+}
+
+.set-button:hover {
+  background-color: rgba(0, 0, 0, 0.932);
+  color: white;
+  transition: background-color 0.15s;
+}
+
+/* Status styles */
+.valid {
+  color: green;
+}
+
+.invaild {
+  color: red;
+}
+
+.invalid-button {
+  background-color: red;
+}
+.invalid-button:hover {
+  background-color: rgba(255, 0, 0, 0.829);
+  color: white;
+  transition: background-color 0.15s;
+}
+
+.valid-button {
+  background-color: green;
+  color: white;
+}
+
+.valid-button:hover {
+  background-color: rgba(0, 128, 0, 0.822);
+  color: white;
+  transition: background-color 0.15s;
+}

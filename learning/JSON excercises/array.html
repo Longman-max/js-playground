@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+      // const books = [
+      //   { title: "Book1", author: "Author1" },
+      //   { title: "Book2", author: "Author2" },
+      //   { title: "Book3", author: "Author3" },
+      //   { title: "Book4", author: "Author4" },
+      // ];
+
+      // console.log(books);
+
+      // books.push = { title: "New book", author: "New author" };
+      // console.log(books);
+
+      
+        // Create an array of objects
+      const books = [
+        { title: "Book1", author: "author1" },
+        { title: "Book2", author: "author2" },
+        { title: "Book3", author: "author3" },
+      ];
+
+      // Convert the array to JSON
+      const jsonBooks = JSON.stringify(books);
+
+      // Store the JSON in localStorage
+      localStorage.setItem("books", jsonBooks);
+
+      // Retrieve and parse the JSON from localStorage
+      const storedBooks = JSON.parse(localStorage.getItem("books"));
+
+      // Manipulate the array (e.g., add a new book)
+      storedBooks.push({ title: "New boook", author: "New author" });
+
+      // Update the stored JSON in local storage
+
+      localStorage.setItem("books", JSON.stringify(storedBooks));
+      console.log(localStorage.getItem("books"));
+      console.log(storedBooks);
+    </script>
+</body>
+</html>

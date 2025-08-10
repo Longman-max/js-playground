@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DOM excercises</title>
+  </head>
+  <body>
+    <input onkeyup="showTyping()" />
+    <p class="display-text"></p>
+    <script>
+      function showTyping() {
+        const text = document.querySelector("input").value;
+        document.querySelector(".display-text").innerHTML = `${text}`;
+      }
+    </script>
+  </body>
+</html>

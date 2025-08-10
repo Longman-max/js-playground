@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <style>
+      .container {
+        background-color: white;
+        height: 100px;
+        width: 200px;
+        border: solid black;
+        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+      }
+      button {
+        display: inline-block;
+      }
+      .house {
+        display: block;
+        justify-content: center;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="house">
+      <div id="container" class="container">White</div>
+      <button id="blue">Blue</button>
+      <button id="red">Red</button>
+      <button id="restore">Restore defaults</button>
+    </div>
+
+    <script>
+      const blueButton = document.getElementById("blue");
+      const redButton = document.getElementById("red");
+      const restoreButton = document.getElementById("restore");
+      const box = document.getElementById("container");
+
+      blueButton.addEventListener("click", () => {
+        box.style.backgroundColor = "blue";
+        if (box.style.backgroundColor === "blue") {
+          box.innerText = "Box is blue";
+        }
+      });
+
+      redButton.addEventListener("click", () => {
+        box.style.backgroundColor = "red";
+        if (box.style.backgroundColor === "red") {
+          box.innerText = "Box is red";
+        }
+      });
+
+      restoreButton.addEventListener("click", () => {
+        box.style.backgroundColor = "";
+        box.innerText = "White";
+      });
+    </script>
+  </body>
+</html>
